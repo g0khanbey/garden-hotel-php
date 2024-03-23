@@ -107,7 +107,7 @@
                         alt="Sample image">
                 </div>
                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-                    <form action="./registerislem.php" method="post">
+                    <form action="./registerislem" method="post">
 
 
                         <div class="divider d-flex align-items-center my-4">

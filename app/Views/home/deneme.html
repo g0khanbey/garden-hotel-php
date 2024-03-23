@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otobüs Bileti Seçim Ekranı</title>
+</head>
+<body>
+    <h2>Otobüs Bileti Seçim Ekranı</h2>
+    <form id="biletForm">
+        <label for="gidis">Gidiş İli:</label>
+        <select id="gidis" name="gidis">
+            <option value="kocaeli">Kocaeli</option>
+            <option value="istanbul">İstanbul</option>
+            <option value="bursa">Bursa</option>
+            <option value="sakarya">Sakarya</option>
+        </select><br><br>
+
+        <label for="donus">Dönüş İli:</label>
+        <select id="donus" name="donus">
+            <option value="kocaeli">Kocaeli</option>
+            <option value="istanbul">İstanbul</option>
+            <option value="bursa">Bursa</option>
+            <option value="sakarya">Sakarya</option>
+        </select><br><br>
+
+        <input type="checkbox" id="donusCheckbox" name="donusCheckbox">
+        <label for="donusCheckbox">Dönüş Bileti Almak İstiyorum</label><br><br>
+
+        <label for="tarihGidis">Gidiş Tarihi:</label>
+        <input type="date" id="tarihGidis" name="tarihGidis"><br><br>
+
+        <div id="donusTarihDiv" style="display: none;">
+            <label for="tarihDonus">Dönüş Tarihi:</label>
+            <input type="date" id="tarihDonus" name="tarihDonus"><br><br>
+        </div>
+
+        <button type="submit">Bilet Al</button>
+    </form>
+
+    <script>
+        // JavaScript ile dönüş tarih input'unun görünürlüğünü kontrol etme
+        document.getElementById('donusCheckbox').addEventListener('change', function() {
+            var donusTarihDiv = document.getElementById('donusTarihDiv');
+            donusTarihDiv.style.display = this.checked ? 'block' : 'none';
+            if (!this.checked) {
+                document.getElementById('tarihDonus').value = ''; // Dönüş tarihini sıfırla
+            }
+        });
+    </script>
+</body>
+</html>

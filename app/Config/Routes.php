@@ -25,6 +25,8 @@ $routes->get('/register', 'RegisterController::index');
 
 $routes->get('/loginislem', 'LoginController::index');
 
+$routes->post('/registerislem', 'RegisterislemController::index');
+
 
 
 
